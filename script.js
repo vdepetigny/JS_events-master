@@ -67,8 +67,8 @@ let cardView = document.querySelectorAll(".btn-group");
 for (let a = 0; a < card.length; a++) {
   
   let onCardsMouseMove = function() {	
-	  imgCard = card[a].querySelector('.card-img-top')
-	  textCard = card[a].querySelector('.card-text')
+	  let imgCard = card[a].querySelector('.card-img-top')
+	  let textCard = card[a].querySelector('.card-text')
 	    
 	    if (textCard.style.display === "none") {
         textCard.style.display = "block";
@@ -78,12 +78,26 @@ for (let a = 0; a < card.length; a++) {
         textCard.style.display = "none";
         imgCard.style.width = "20%";
       }
-
   } 
-  cardView[a].addEventListener('mouseover', onCardsMouseMove)
-
+  cardView[a].children[0].addEventListener('mouseover', onCardsMouseMove)
 }
 
-// Fonctionnalité 7 :
 
-// Fonctionnalité 8 :
+// Fonctionnalité 7 : Cliquer sur le bouton ==> gris >>> la dernière carte passe en première (et inversement pour bouton <== bleu)
+
+let forwardButton = document.querySelectorAll(".my-2")[1]
+let backwardButton = document.querySelectorAll(".my-2")[0]	
+let cardRow = document.querySelectorAll("div.row")[1]	
+
+let onFowardButtonClick = function() {
+  cardRow.insertBefore(cardRow.lastChild, cardRow.firstChild)
+}
+let onBackwardButtonClick = function(e) {
+  e.preventDefault();
+  cardRow.insertBefore(cardRow.firstChild, cardRow.lastChild)
+}
+forwardButton.addEventListener('click', onFowardButtonClick)
+backwardButton.addEventListener('click', onBackwardButtonClick)
+
+// Fonctionnalité 9 : Cliquer sur le bouton <== bleu >>> la première carte passe en dernière
+
