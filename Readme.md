@@ -8,6 +8,8 @@ Ce repo comprend les 6 premières fonctionnalités Javascript du projet :
 4. Idem pour le bouton EDIT de la 2nd carte, il verdit et deverdit sur commande!
 5. Aventurez vous dans l'apocalypse en double-cliquant sur la navbar (adieu formes, couleurs et polices...), puis revenez sur vos pas
 6. Amusez-vous à faire disparaître les cartes par un frôlement de bouton VIEW
+7. Petit double-click sur les arrows et les cartes défilent joliment rien que pour tes beaux yeux
+8. Idem, mais dans l'autre sens!!!
 
 ## Mais avant de commencer tout ça, je vous invite à la détente... Sur un air de java !
 
