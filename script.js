@@ -83,7 +83,7 @@ for (let a = 0; a < card.length; a++) {
 }
 
 
-// Fonctionnalité 7 : Cliquer sur le bouton ==> gris >>> la dernière carte passe en première (et inversement pour bouton <== bleu)
+// Fonctionnalités 7&8 : Cliquer sur le bouton ==> gris >>> la dernière carte passe en première (et inversement pour bouton <== bleu)
 
 let forwardButton = document.querySelectorAll(".my-2")[1]
 let backwardButton = document.querySelectorAll(".my-2")[0]	
