@@ -50,18 +50,39 @@ let styleLinkStatus = false
 let onNavBarDoubleClick = function() {
   if (styleLinkStatus === false) {
     styleLink.setAttribute("href", "#");
-    //styleLink.href = "#"
     styleLinkStatus = true
   }
   else if (styleLinkStatus === true) {
     styleLink.setAttribute("href", "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
-    //styleLink.href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css";
     styleLinkStatus = false
   }
 }	
-navbarDoubleClicker.addEventListener("dblclick", onNavBarDoubleClick )
+navbarDoubleClicker.addEventListener("dblclick", onNavBarDoubleClick)
 
-// Fonctionnalité 6 :
+// Fonctionnalité 6 : Passer sa souris sur le bouton "View" d'une card >>> réduction card (disparition texte, image 20%, boutons restent visibles) (réversible par repassage)
+	
+let card = document.querySelectorAll(".card");
+let cardView = document.querySelectorAll(".btn-group");
+
+for (let a = 0; a < card.length; a++) {
+  
+  let onCardsMouseMove = function() {	
+	  imgCard = card[a].querySelector('.card-img-top')
+	  textCard = card[a].querySelector('.card-text')
+	    
+	    if (textCard.style.display === "none") {
+        textCard.style.display = "block";
+        imgCard.style.width = "100%";
+      } 
+      else {
+        textCard.style.display = "none";
+        imgCard.style.width = "20%";
+      }
+
+  } 
+  cardView[a].addEventListener('mouseover', onCardsMouseMove)
+
+}
 
 // Fonctionnalité 7 :
 
